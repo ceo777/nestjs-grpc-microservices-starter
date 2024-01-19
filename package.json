@@ -1,0 +1,29 @@
+{
+  "name": "nestjs_grpc_microservices",
+  "version": "0.1.0",
+  "description": "NestJS gRPC Microservices Starter Kit",
+  "author": "Oleg Dubnov (https://olegdubnov.com)",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceo777/nestjs-grpc-microservices-starter.git"
+  },
+  "keywords": [
+    "nest",
+    "nestjs",
+    "grpc",
+    "nest grpc",
+    "microservices",
+    "nestjs ddd",
+    "nest starter",
+    "nestjs starter",
+    "nestjs boilerplate"
+  ],
+  "bugs": {
+    "url": "https://github.com/ceo777/nestjs-grpc-microservices-starter/issues"
+  },
+  "homepage": "https://github.com/ceo777/nestjs-grpc-microservices-starter#readme"
+}
