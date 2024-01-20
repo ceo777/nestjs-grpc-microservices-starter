@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "NestJS gRPC Microservices Starter Kit — API Gateway",
   "author": "Oleg Dubnov (https://olegdubnov.com)",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
