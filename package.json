@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "NestJS gRPC Microservices Starter Kit",
   "author": "Oleg Dubnov (https://olegdubnov.com)",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
