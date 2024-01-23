@@ -83,4 +83,19 @@ export class TasksService {
 
         return true;
     }
+
+    async deleteTask(id: number): Promise<boolean> {
+        let taskIndex = await this.getTaskIndex(id);
+
+        if (taskIndex === -1) {
+            throw new RpcException({
+                code: status.NOT_FOUND,
+                message: `Task with ID: ${id} not found!`,
+            });
+        }
+
+        this.mockTasks.splice(taskIndex, 1);
+
+        return true;
+    }
 }

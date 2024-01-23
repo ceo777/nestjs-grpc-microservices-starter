@@ -8,6 +8,7 @@ service TasksService {
   rpc FindOne (TaskId) returns (Task) {}
   rpc Create (Task) returns (Updated) {}
   rpc Update (Task) returns (Updated) {}
+  rpc Delete (TaskId) returns (Updated) {}
 }
 
 message Filter {}

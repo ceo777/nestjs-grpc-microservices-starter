@@ -30,4 +30,9 @@ export class TasksController {
     async update(task: Task, metadata: Metadata, call: ServerUnaryCall<any, any>): Promise<Updated> {
         return { successful: await this.tasksService.updateTask(task) };
     }
+
+    @GrpcMethod('TasksService', 'Delete')
+    async delete(taskId: TaskId, metadata: Metadata, call: ServerUnaryCall<any, any>): Promise<Updated> {
+        return { successful: await this.tasksService.deleteTask(taskId.id) };
+    }
 }
