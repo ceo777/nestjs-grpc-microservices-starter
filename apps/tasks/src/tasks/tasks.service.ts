@@ -40,7 +40,7 @@ export class TasksService {
     }
 
     async getTaskById(id: number): Promise<Task> {
-        const task = this.mockTasks.find(({ id}) => id === id);
+        const task = this.mockTasks.find(object => object.id === id);
 
         if (!task) {
             throw new RpcException({
