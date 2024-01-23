@@ -1,6 +1,6 @@
 {
   "name": "nestjs_grpc_microservices-tasks",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "NestJS gRPC Microservices Starter Kit — Tasks Microservice",
   "author": "Oleg Dubnov (https://olegdubnov.com)",
   "license": "MIT",
