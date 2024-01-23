@@ -1,17 +1,31 @@
-// tasks.proto
+// Tasks Microservice
 syntax = "proto3";
 
 package tasks;
 
 service TasksService {
-  rpc FindOne (TaskById) returns (Task) {}
+  rpc Find (Filter) returns (Tasks) {}
+  rpc FindOne (TaskId) returns (Task) {}
+  rpc Create (Task) returns (Updated) {}
+  rpc Update (Task) returns (Updated) {}
 }
 
-message TaskById {
+message Filter {}
+
+message TaskId {
   int32 id = 1;
 }
 
 message Task {
   int32 id = 1;
   string name = 2;
+  int32 assigned_user = 3;
+}
+
+message Tasks {
+  repeated Task tasks = 1;
+}
+
+message Updated {
+  bool successful = 1;
 }
