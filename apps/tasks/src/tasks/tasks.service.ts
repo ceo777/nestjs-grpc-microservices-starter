@@ -11,7 +11,7 @@ export class TasksService {
         { id: 3, name: 'Task #3', assignedUser: 1 },
     ];
 
-    checkTaskType(task: Task): boolean {
+    private checkTaskType(task: Task): boolean {
         if (!(task.id && task.name && task.assignedUser)) {
             throw new RpcException({
                 code: status.INVALID_ARGUMENT,
@@ -22,11 +22,11 @@ export class TasksService {
         return true;
     }
 
-    async getTaskIndex(id: number): Promise<number> {
+    private async getTaskIndex(id: number): Promise<number> {
         return this.mockTasks.findIndex(object => object.id === id);
     }
 
-    async getTasks(): Promise<Task[]> {
+    public async getTasks(): Promise<Task[]> {
         const tasks = this.mockTasks;
 
         if (!tasks.length) {
@@ -39,7 +39,7 @@ export class TasksService {
         return tasks;
     }
 
-    async getTaskById(id: number): Promise<Task> {
+    public async getTaskById(id: number): Promise<Task> {
         const task = this.mockTasks.find(object => object.id === id);
 
         if (!task) {
@@ -52,7 +52,7 @@ export class TasksService {
         return task;
     }
 
-    async createTask(task: Task): Promise<boolean> {
+    public async createTask(task: Task): Promise<boolean> {
         this.checkTaskType(task);
         let taskIndex = await this.getTaskIndex(task.id);
 
@@ -68,7 +68,7 @@ export class TasksService {
         return true;
     }
 
-    async updateTask(task: Task): Promise<boolean> {
+    public async updateTask(task: Task): Promise<boolean> {
         this.checkTaskType(task);
         let taskIndex = await this.getTaskIndex(task.id);
 
@@ -84,7 +84,7 @@ export class TasksService {
         return true;
     }
 
-    async deleteTask(id: number): Promise<boolean> {
+    public async deleteTask(id: number): Promise<boolean> {
         let taskIndex = await this.getTaskIndex(id);
 
         if (taskIndex === -1) {
